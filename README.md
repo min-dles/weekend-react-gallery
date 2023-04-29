@@ -12,7 +12,7 @@ Base Mode of this project is to build an image gallery that passes the data from
 
 ### Task List
 ✅ - Use `axios ` to retrieve (`GET`) data from to `/gallery` and store it in `App.jsx`.
-- Create a new **component** for the `GalleryList` and pass it the gallery data stored in `App` via `props`.
+✅- Create a new **component** for the `GalleryList` and pass it the gallery data stored in `App` via `props`.
     - Iterate (loop over) the list of gallery data
     - Make GalleryItems
 - Create a new **component** called `GalleryItem.jsx` and pass it the individual gallery item via `props`. 

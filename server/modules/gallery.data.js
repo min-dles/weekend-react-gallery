@@ -8,7 +8,7 @@ const galleryItems = [
     { 
         id: 2, 
         path: 'images/lola_small.jpg',
-        description: 'Photo of a goat taken at Minneahaha Dog Park.',
+        description: 'Photo of a goat taken at Minnehaha Dog Park.',
         likes: 1000000000
     }
 ];

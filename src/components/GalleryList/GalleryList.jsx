@@ -5,7 +5,10 @@ function GalleryList(props) {
             {
                 props.gallery.map((image) => {
                     return (
-                        <li key={image.id}>Here is image desc: {image.description}</li>
+                        <li key={image.id}>
+                            <img src={image.path} />
+                            <p>image description: {image.description}</p>
+                        </li>
                     )
                 })
             }
