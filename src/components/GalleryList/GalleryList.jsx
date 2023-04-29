@@ -1,6 +1,15 @@
 function GalleryList(props) {
+
     return (
-        <h1>Test</h1>
+        <ul>
+            {
+                props.gallery.map((image) => {
+                    return (
+                        <li key={image.id}>Here is image desc: {image.description}</li>
+                    )
+                })
+            }
+        </ul>
     )
 }
 
