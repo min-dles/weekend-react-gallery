@@ -30,7 +30,7 @@ function GalleryItem(props) {
     }
 
     return (
-        <li>
+        <li className="gallery-item">
             {/* TEST: displayImage is {displayImage ? "true" : "false"} */}
             <div className="display-box" onClick={toggleDisplay}>
                 <ImageOrDescription />

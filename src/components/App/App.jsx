@@ -12,7 +12,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    updateLikes();
+    updateLikes(likeCount + 1);
   }, [])
 
   const fetchImages = () => {
