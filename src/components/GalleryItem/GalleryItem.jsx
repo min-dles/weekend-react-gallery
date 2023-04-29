@@ -8,7 +8,6 @@ function GalleryItem(props) {
 
     // going to toggle image and description here:
     const toggleDisplay = () => {
-        // console.log('Image was clicked!');
         if (displayImage) {
             setDisplayImage(false)
         } else {
@@ -31,14 +30,10 @@ function GalleryItem(props) {
 
     // axios fetch can go HERE for the ID PUT manipulation for likes!!!
     const updateLikes = () => {
-
-        console.log('In updateLikes function for GalleryItem component.');
         axios({
           method: 'PUT',
           url: `/gallery/like/${props.image.id}`
         }).then((response) => {
-          const likes = response.data;
-          console.log('Axios fetch for Likes status:', likes);
           props.fetchImages();
         }).catch((error) => {
           console.log('error in axios PUT:', error);
@@ -47,7 +42,6 @@ function GalleryItem(props) {
 
     return (
         <li className="gallery-item">
-            {/* TEST: displayImage is {displayImage ? "true" : "false"} */}
             <div className="display-box" onClick={toggleDisplay}>
                 <ImageOrDescription />
             </div>

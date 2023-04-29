@@ -15,10 +15,6 @@ function GalleryList(props) {
                             image={image}
                             key={image.id}
                         />
-                        // <li key={image.id}>
-                        //     <img src={image.path} />
-                        //     <p>image description: {image.description}</p>
-                        // </li>
                     )
                 })
             }

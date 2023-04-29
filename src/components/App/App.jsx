@@ -25,15 +25,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
+        <h1 className="App-title">Image Gallery:</h1>
       </header>
       <GalleryList
         gallery={gallery}
         fetchImages={fetchImages}
       />
-      {/* <p>Gallery goes here</p> */}
-      {/* <img src="images/goat_small.jpg"/>
-        <img src="images/lola_small.jpg"/> */}
     </div>
   );
 }
