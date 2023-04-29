@@ -11,9 +11,9 @@ function GalleryList(props) {
                 props.gallery.map((image) => {
                     return (
                         <GalleryItem 
-                            updateLikes={props.updateLikes}
+                            fetchImages={props.fetchImages}
                             image={image}
-                            key={image.id} 
+                            key={image.id}
                         />
                         // <li key={image.id}>
                         //     <img src={image.path} />

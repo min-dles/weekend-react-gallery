@@ -5,14 +5,9 @@ import GalleryList from '../GalleryList/GalleryList.jsx';
 
 function App() {
   const [gallery, setGallery] = useState([]);
-  const [likeCount, setLikes] = useState([]);
 
   useEffect(() => {
     fetchImages();
-  }, [])
-
-  useEffect(() => {
-    updateLikes(likeCount + 1);
   }, [])
 
   const fetchImages = () => {
@@ -27,18 +22,6 @@ function App() {
     })
   }
 
-  const updateLikes = () => {
-    axios({
-      method: 'PUT',
-      url: '/gallery/like/:id'
-    }).then((response) => {
-      const likes = response.data;
-      console.log('Axios fetch for Likes status:', likes);
-      setLikes(likes);
-    }).catch((error) => {
-      console.log('error in axios PUT:', error);
-    })
-  }
   return (
     <div className="App">
       <header className="App-header">
@@ -46,8 +29,7 @@ function App() {
       </header>
       <GalleryList
         gallery={gallery}
-        likeCount={likeCount}
-        updateLikes={updateLikes}
+        fetchImages={fetchImages}
       />
       {/* <p>Gallery goes here</p> */}
       {/* <img src="images/goat_small.jpg"/>
