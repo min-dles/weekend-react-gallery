@@ -1,3 +1,4 @@
+import React from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
 function GalleryList(props) {
@@ -8,7 +9,11 @@ function GalleryList(props) {
             {
                 props.gallery.map((image) => {
                     return (
-                        <GalleryItem image={image} key={image.id}/>
+                        <GalleryItem 
+                            updateLikes={props.updateLikes}
+                            image={image}
+                            key={image.id} 
+                        />
                         // <li key={image.id}>
                         //     <img src={image.path} />
                         //     <p>image description: {image.description}</p>

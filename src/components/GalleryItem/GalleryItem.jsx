@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import './GalleryItem.css'
+import React, { useState } from 'react';
+import './GalleryItem.css';
 
 function GalleryItem(props) {
     // I want image to be displayed first- so setting state to true:
     const [displayImage, setDisplayImage] = useState(true);
+    const {clickToLike} = props.updateLikes;
 
     // going to toggle image and description here:
     const toggleDisplay = () => {
@@ -35,7 +36,7 @@ function GalleryItem(props) {
                 <ImageOrDescription />
             </div>
             <p>LIKES: {props.image.likes}</p>
-            <button>Like Pic!✨</button>
+            <button onClick={clickToLike}>Like ❤️‍🔥 Pic</button>
         </li>
     )
 }
