@@ -1,7 +1,14 @@
 function GalleryItem(props) {
+    const toggleDisplay = () => {
+        console.log('Image was clicked!');
+    }
+
     return (
-        <li key={props.image.id}>
-            <img src={props.image.path} />
+        <li>
+            <img 
+                src={props.image.path} 
+                onClick={toggleDisplay}
+            />
             <p>image description: {props.image.description}</p>
         </li>
     )
