@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './GalleryItem.css'
 
 function GalleryItem(props) {
     // I want image to be displayed first- so setting state to true:
@@ -18,16 +19,11 @@ function GalleryItem(props) {
     const ImageOrDescription = () => {
         if (displayImage) {
             return (
-                <img
-                    src={props.image.path}
-                    onClick={toggleDisplay}
-                />
+                <img src={props.image.path}/>
             )
         } else {
             return (
-                <p onClick={toggleDisplay}>
-                    image description: {props.image.description}
-                </p>
+                <p>image description: {props.image.description}</p>
             )
         }
     }
@@ -35,7 +31,9 @@ function GalleryItem(props) {
     return (
         <li>
             {/* TEST: displayImage is {displayImage ? "true" : "false"} */}
-            <ImageOrDescription />
+            <div className="display-box" onClick={toggleDisplay}>
+                <ImageOrDescription />
+            </div>
         </li>
     )
 }
