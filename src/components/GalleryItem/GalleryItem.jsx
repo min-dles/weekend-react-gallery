@@ -34,6 +34,8 @@ function GalleryItem(props) {
             <div className="display-box" onClick={toggleDisplay}>
                 <ImageOrDescription />
             </div>
+            <p>LIKES: {props.image.likes}</p>
+            <button>Like Pic!✨</button>
         </li>
     )
 }
