@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './GalleryItem.css';
+import axios from 'axios';
 
 function GalleryItem(props) {
     // I want image to be displayed first- so setting state to true:
     const [displayImage, setDisplayImage] = useState(true);
-    const {clickToLike} = props.updateLikes;
 
     // going to toggle image and description here:
     const toggleDisplay = () => {
@@ -29,6 +29,22 @@ function GalleryItem(props) {
         }
     }
 
+    // axios fetch can go HERE for the ID PUT manipulation for likes!!!
+    const updateLikes = () => {
+
+        console.log('In updateLikes function for GalleryItem component.');
+        axios({
+          method: 'PUT',
+          url: `/gallery/like/${props.image.id}`
+        }).then((response) => {
+          const likes = response.data;
+          console.log('Axios fetch for Likes status:', likes);
+          props.fetchImages();
+        }).catch((error) => {
+          console.log('error in axios PUT:', error);
+        })
+      }
+
     return (
         <li className="gallery-item">
             {/* TEST: displayImage is {displayImage ? "true" : "false"} */}
@@ -36,7 +52,7 @@ function GalleryItem(props) {
                 <ImageOrDescription />
             </div>
             <p>LIKES: {props.image.likes}</p>
-            <button onClick={clickToLike}>Like ❤️‍🔥 Pic</button>
+            <button onClick={updateLikes}>Like ❤️‍🔥 Pic</button>
         </li>
     )
 }
