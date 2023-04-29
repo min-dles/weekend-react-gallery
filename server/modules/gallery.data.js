@@ -10,6 +10,12 @@ const galleryItems = [
         path: 'images/lola_small.jpg',
         description: 'Photo of a goat taken at Minnehaha Dog Park.',
         likes: 1000000000
+    },
+    {
+        id: 3,
+        path: 'images/squidward_art.jpg',
+        description: 'Beautiful painting by Squidward Tentacles in abstract style.',
+        likes: 15
     }
 ];
 
