@@ -16,6 +16,12 @@ const galleryItems = [
         path: 'images/squidward_art.jpg',
         description: 'Beautiful painting by Squidward Tentacles in abstract style.',
         likes: 15
+    },
+    {
+        id: 4,
+        path: 'images/bee_small.jpg',
+        description: 'An adorable honeybee resting on a purple flower.',
+        likes: 1049
     }
 ];
 
