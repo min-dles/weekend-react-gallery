@@ -13,7 +13,7 @@ background-color: pink;
     height: 220px;
 } */
 
-.display-box, .display-box:hover { 
+.display-box { 
     display: flex;
     justify-content: center;
     align-items: center;
