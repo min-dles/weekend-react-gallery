@@ -2,7 +2,7 @@
 
 Technologies being used include: 
 - React
-- Nodemon
+- HTML
 - CSS
 - Javascript 
 
