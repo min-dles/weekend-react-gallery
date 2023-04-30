@@ -24,9 +24,9 @@ Base Mode of this project is to build an image gallery that passes the data from
     - ✅ Update the gallery each time a like button is clicked.
 
 ### STRETCH GOALS
-- Move the data into a database (postgresql)
-    - name your database `react_gallery`
-    - include a `database.sql` file documenting your database tables
+- ✅ Move the data into a database (postgresql)
+    - ✅ name your database `react_gallery`
+    - ✅ include a `database.sql` file documenting your database tables
 - Add a form (new **component**) that allows a user to POST a new gallery item
     - Client side form (use absolute URL for images)
     - Server side route for posting an image
