@@ -23,7 +23,7 @@ function GalleryItem(props) {
             )
         } else {
             return (
-                <p>image description: {props.image.description}</p>
+                <p>{props.image.description}</p>
             )
         }
     }

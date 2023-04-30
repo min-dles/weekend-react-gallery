@@ -2,8 +2,49 @@
     margin: 15px;
 }
 
-.display-box { 
-    width: 150px;
-    height: 200px;
+.display-box {
+width: 150px;
+height: 200px;
+background-color: pink;
+}
+
+.display-box:hover {
+    width: 165px;
+    height: 220px;
+}
+
+.display-box, .display-box:hover { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    border-radius: 15px 50px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+
+img {
+    height: 100%;
+    width: auto;
+}
+
+p, button {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 12px;
+}
+
+button {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: none;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+button:active {
+    background-color: rgb(255, 152, 170);
 }

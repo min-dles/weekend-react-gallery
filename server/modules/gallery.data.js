@@ -22,6 +22,12 @@ const galleryItems = [
         path: 'images/bee_small.jpg',
         description: 'An adorable honeybee resting on a purple flower.',
         likes: 1049
+    },
+    {
+        id: 5,
+        path: '/images/bee_closeup.jpg',
+        description: 'A close-up of a honeybee resting on a yellow flower.',
+        likes: 37
     }
 ];
 
