@@ -8,10 +8,10 @@ height: 200px;
 background-color: pink;
 }
 
-.display-box:hover {
+/* .display-box:hover {
     width: 165px;
     height: 220px;
-}
+} */
 
 .display-box, .display-box:hover { 
     display: flex;
@@ -27,6 +27,13 @@ background-color: pink;
 img {
     height: 100%;
     width: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+    /* height: 110%;
+    width: auto; */
+    transform: scale(1.1);
 }
 
 p, button {
